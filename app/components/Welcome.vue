@@ -7,13 +7,16 @@ const error = ref(false)
 async function handleFormSubmit() {
     const response = await $fetch('https://mail.lightmaeres.ch/subscription/form', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
         body: {
             email: email.value,
             name: name.value,
             nonce: '',
             l: "74a1f7e6-5333-4978-8f92-376ff72e2254",  // Early birds list id
         },
-        mode: "cors"
+        mode: "cors",
     }).then(_ => {
         navigateTo('subscription-confirmed')
     }).catch(err => {
