@@ -34,6 +34,8 @@ export default defineNuxtConfig({
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
   },
 
+  ogImage: { zeroRuntime: true },
+
   icon: {
     mode: 'css',
     cssLayer: 'base'
@@ -42,13 +44,14 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
 
   modules: [
-  '@nuxt/hints',
-  '@nuxt/fonts',
-  '@nuxt/image',
-  '@nuxt/scripts',
-  '@nuxt/icon',
-  '@vueuse/nuxt',
-  '@nuxtjs/seo'
+    '@nuxt/hints',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/icon',
+    '@vueuse/nuxt',
+    '@nuxtjs/seo',
+    'nuxt-og-image'
   ]
 
 })
