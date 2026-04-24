@@ -12,6 +12,7 @@ async function handleFormSubmit() {
             name: name.value,
             "74a1f7e6-5333-4978-8f92-376ff72e2254": true,  // Early birds list id
         },
+        mode: "cors"
     }).then(_ => {
         navigateTo('subscription-confirmed')
     }).catch(err => {
