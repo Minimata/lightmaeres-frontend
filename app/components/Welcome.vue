@@ -10,7 +10,8 @@ async function handleFormSubmit() {
         body: {
             email: email.value,
             name: name.value,
-            "74a1f7e6-5333-4978-8f92-376ff72e2254": true,  // Early birds list id
+            nonce: '',
+            l: "74a1f7e6-5333-4978-8f92-376ff72e2254",  // Early birds list id
         },
         mode: "cors"
     }).then(_ => {
